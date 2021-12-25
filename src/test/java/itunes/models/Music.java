@@ -6,7 +6,7 @@ import lombok.Data;
 
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class TVShow {
+public class Music {
 
     @JsonProperty("wrapperType")
     private String wrapperType;
@@ -46,14 +46,10 @@ public class TVShow {
     private Double collectionPrice;
     @JsonProperty("trackPrice")
     private Double trackPrice;
-    @JsonProperty("collectionHdPrice")
-    private Double collectionHdPrice;
-    @JsonProperty("trackHdPrice")
-    private Double trackHdPrice;
     @JsonProperty("releaseDate")
     private String releaseDate;
-//    @JsonProperty("collectionExplicitness")
-//    private String collectionExplicitness;
+    @JsonProperty("collectionExplicitness")
+    private String collectionExplicitness;
     @JsonProperty("trackExplicitness")
     private String trackExplicitness;
     @JsonProperty("discCount")
@@ -72,10 +68,6 @@ public class TVShow {
     private String currency;
     @JsonProperty("primaryGenreName")
     private String primaryGenreName;
-    @JsonProperty("contentAdvisoryRating")
-    private String contentAdvisoryRating;
-    @JsonProperty("shortDescription")
-    private String shortDescription;
-    @JsonProperty("longDescription")
-    private String longDescription;
+    @JsonProperty("isStreamable")
+    private Boolean isStreamable;
 }

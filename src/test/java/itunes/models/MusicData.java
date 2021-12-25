@@ -8,11 +8,11 @@ import java.util.List;
 
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class TVShowData {
+public class MusicData {
 
     @JsonProperty("resultCount")
     private Integer resultCount;
 
     @JsonProperty("results")
-    private List<TVShow> results;
+    private List<Music> results;
 }
