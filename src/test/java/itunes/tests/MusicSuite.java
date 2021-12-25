@@ -12,7 +12,7 @@ import static itunes.tests.Specs.responseSpec;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class MusicSuite extends Testbase{
+public class MusicSuite extends Testbase {
     @Test
     @Description("Search for song")
     public void searchSong() {
@@ -30,7 +30,6 @@ public class MusicSuite extends Testbase{
         assertEquals("Issues", data.getResults().get(0).getArtistName());
         assertEquals("Rock", data.getResults().get(0).getPrimaryGenreName());
         assertEquals("Tapping Out - Single", data.getResults().get(0).getCollectionName());
-
     }
 
     @Test
