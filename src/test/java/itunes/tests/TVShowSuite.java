@@ -2,6 +2,7 @@ package itunes.tests;
 
 import io.qameta.allure.Description;
 import itunes.models.TVShowData;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static itunes.filters.CustomLogFilter.customLogFilter;
@@ -15,6 +16,7 @@ import static org.hamcrest.Matchers.is;
 public class TVShowSuite extends Testbase {
 
     @Test
+    @DisplayName("Successful search")
     @Description("Search for 'Devs' tv show in")
     public void positiveSearch() {
         TVShowData data = given()
@@ -36,6 +38,7 @@ public class TVShowSuite extends Testbase {
     }
 
     @Test
+    @DisplayName("Search items amount")
     @Description("Check if search returns correct amount")
     public void resultsAmount() {
         TVShowData data = given()
@@ -53,6 +56,7 @@ public class TVShowSuite extends Testbase {
     }
 
     @Test
+    @DisplayName("Search with collection name")
     @Description("Check if collectionName parameter works")
     public void collectionName() {
         TVShowData data = given()
@@ -73,6 +77,7 @@ public class TVShowSuite extends Testbase {
     }
 
     @Test
+    @DisplayName("Search for TV show which does not exist")
     @Description("Empty search result")
     public void emptyResult() {
         TVShowData data = given()
@@ -91,6 +96,7 @@ public class TVShowSuite extends Testbase {
     }
 
     @Test
+    @DisplayName("Result limit")
     @Description("Check if result limit works")
     public void resultLimitation() {
         TVShowData data = given()
@@ -109,6 +115,7 @@ public class TVShowSuite extends Testbase {
     }
 
     @Test
+    @DisplayName("Invalid media type search")
     @Description("Check error message when media type is incorrect")
     public void invalidMediaType() {
         given()

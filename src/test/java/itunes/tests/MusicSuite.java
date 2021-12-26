@@ -3,6 +3,7 @@ package itunes.tests;
 import io.qameta.allure.Description;
 import itunes.models.MusicData;
 import itunes.models.TVShowData;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
@@ -14,7 +15,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class MusicSuite extends Testbase {
     @Test
-    @Description("Search for song")
+    @DisplayName("Search for song")
+    @Description("Check if search returns correct result")
     public void searchSong() {
         MusicData data = given()
                 .spec(request)
@@ -33,7 +35,8 @@ public class MusicSuite extends Testbase {
     }
 
     @Test
-    @Description("Search for album")
+    @DisplayName("Search for album")
+    @Description("Search for album and check if result is correct")
     public void searchAlbum() {
         TVShowData data = given()
                 .spec(request)
@@ -53,6 +56,7 @@ public class MusicSuite extends Testbase {
     }
 
     @Test
+    @DisplayName("Result limit test")
     @Description("Check if result limit works")
     public void resultLimitation() {
         TVShowData data = given()
@@ -72,6 +76,7 @@ public class MusicSuite extends Testbase {
     }
 
     @Test
+    @DisplayName("Invalid artist entry")
     @Description("Search for artist who doesn't exist")
     public void noResults() {
         TVShowData data = given()
