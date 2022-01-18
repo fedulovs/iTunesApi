@@ -1,4 +1,4 @@
-<code><img height="100" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/ITunes_12.2_logo.png/80px-ITunes_12.2_logo.png"></code>
+<img height="100" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/ITunes_12.2_logo.png/80px-ITunes_12.2_logo.png">
 
 # API automation project for [iTunes](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/iTuneSearchAPI/index.html)
 
